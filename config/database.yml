@@ -16,6 +16,7 @@ test:
 
 production:
   <<: *default
-  database: pai_trello_production
-  username: pai_trello
-  password: <%= ENV['PAI_TRELLO_DATABASE_PASSWORD'] %>
+  username: <%= ENV['PAI_TRELLO_USERNAME'] %>
+  password: <%= ENV['PAI_TRELLO_PASSWORD'] %>
+  host: <%= ENV['PAI_TRELLO_HOST'] %>
+  database: <%= ENV['PAI_TRELLO_DATABASE_'] %>
