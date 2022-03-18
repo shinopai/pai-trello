@@ -54,3 +54,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# management user
+gem 'devise'
+
+# use tailwindcss on rails without node
+# gem "tailwindcss-rails", "~> 2.0"
+
+# japanization of rails
+gem 'i18n'
+
+# japanization of devise
+gem 'devise-i18n'
+
+# rails console
+gem 'pry-rails'

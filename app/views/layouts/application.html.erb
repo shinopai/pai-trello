@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PaiTrello</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>PaiTrello</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <!-- google icons -->
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons', media: 'all' %>
+</head>
+
+<body>
+  <%= render 'layouts/partial/header' %>
+
+  <% if flash[:notice] %>
+  <p class="bg-green-100 rounded-lg py-3 px-6 mb-4 text-base text-green-700 mb-3 text-center" role="alert"><%= notice %></p>
+  <% end %>
+
+  <% if flash[:alert] %>
+  <p class="bg-red-100 rounded-lg py-3 px-6 mb-4 text-base text-red-700 mb-3 text-center" role="alert"><%= alert %></p>
+  <% end %>
+
+  <%= yield %>
+
+  <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+</body>
+
 </html>

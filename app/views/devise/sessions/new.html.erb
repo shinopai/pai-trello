@@ -1,0 +1,63 @@
+<div class="block p-6 rounded-lg shadow-lg bg-white lg:w-2/3 mx-auto mt-10">
+  <div class="text-center mb-5">
+    <h1 class="text-xl font-bold">PaiTrelloにログイン</h1>
+    <span class="block">or</span>
+    <%= link_to 'アカウントを作成', new_user_registration_path, class: 'text-indigo-500 hover:underline' %>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |login_user| %>
+
+  <div class="form-group mb-6">
+    <%= login_user.label :email, 'メールアドレス', class: 'form-label inline-block mb-2 text-gray-700' %>
+    <%= login_user.email_field :email, class: 'form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none', placeholder: 'Emailを入力してください' %>
+  </div>
+  <div class="form-group mb-6">
+    <%= login_user.label :password, 'パスワード', class: 'form-label inline-block mb-2 text-gray-700' %>
+    <%= login_user.password_field :password, class: 'form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none', placeholder: 'パスワードを入力してください' %>
+  </div>
+
+  <%= login_user.submit 'ログインする', class: 'px-6
+      py-2.5
+      bg-blue-600
+      text-white
+      font-medium
+      text-md
+      leading-tight
+      uppercase
+      rounded
+      shadow-md
+      hover:bg-blue-700 hover:shadow-lg
+      focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+      active:bg-blue-800 active:shadow-lg
+      transition
+      duration-150
+      ease-in-out cursor-pointer' %>
+  <% end %>
+</div>

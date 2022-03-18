@@ -11,3 +11,12 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// jquery
+require('jquery')
+
+// tailwindcss
+import "../css/tailwind.css";
+
+// main jquery file
+import "../lib/main";
