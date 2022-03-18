@@ -19,4 +19,4 @@ production:
   username: <%= ENV['PAI_TRELLO_USERNAME'] %>
   password: <%= ENV['PAI_TRELLO_PASSWORD'] %>
   host: <%= ENV['PAI_TRELLO_HOST'] %>
-  database: <%= ENV['PAI_TRELLO_DATABASE_'] %>
+  database: <%= ENV['PAI_TRELLO_DATABASE'] %>
