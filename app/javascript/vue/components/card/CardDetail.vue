@@ -35,7 +35,7 @@ export default {
   },
   setup(props) {
     const cardId = props.id
-    const card = ref()
+    const card = ref({})
     const cardList = ref('')
     const router = useRouter()
 

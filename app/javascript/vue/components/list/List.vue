@@ -35,8 +35,7 @@
 </template>
 
 <script>
-import { ref, onMounted, computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { onMounted, computed } from 'vue'
 import { useStore } from 'vuex'
 import Delete from 'vue-material-design-icons/Delete.vue'
 import Pencil from 'vue-material-design-icons/Pencil.vue'
@@ -49,12 +48,11 @@ export default {
     Delete, Pencil, Plus, Card
   },
   setup() {
-    const router = useRoute()
     const store= useStore()
 
-        // delete list
+    // delete list
     const deleteList = async (listId) => {
-      if(confirm('本当に削除して宜しいですか？')){
+      if(confirm('削除して宜しいですか？')){
         await Axios.delete('/api/v1/lists/' + listId)
                   .then( res => {
                      console.log(res.data.message)

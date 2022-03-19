@@ -93,6 +93,7 @@ export default {
                    console.log(res.data)
                    title.value = res.data.title
                    memo.value = res.data.memo
+                   listId.value = res.data.list_id
                  })
                  .catch( err => {
                    console.log(err.response.data)

@@ -37,7 +37,6 @@ const store = createStore({
       await Axios.get('/api/v1/users/' + userId + '/lists')
         .then(res => {
           context.commit('setLists', res.data)
-          console.log(res.data);
         })
         .catch(err => {
           console.log(err.response.data.message)
