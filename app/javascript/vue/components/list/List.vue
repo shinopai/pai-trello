@@ -113,3 +113,9 @@ export default {
   },
 }
 </script>
+
+<style>
+  .plus-card-button::after{
+    content: ' カードを追加';
+  }
+</style>
